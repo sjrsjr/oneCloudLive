@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>一朵云上住</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="wantedLetter wrap-no rentLetter">
+			<!--出租标签正在加载中-->
+			<div class="loading test" style="display: none;">
+				<ul class="load-wrap">
+					<li></li>
+					<li></li>
+
+				</ul>
+			</div>
+			<div class="pleaseFill test">
+				<ul>
+					<li>请填写完整的信息</li>
+					<li class="sure"></li>
+				</ul>
+			</div>
+			<div class="pleaseSelect test">
+				<ul>
+					<li>最多选三个哦</li>
+					<li class="sure"></li>
+				</ul>
+			</div>
+			<div class="letter-main">
+				<h1>差点忘了告诉你</h1>
+				<div class="wantedLabel">
+					<h2>
+						这个房间有一些优点很赞哦&nbsp;<span>(限选三个)</span>
+					</h2>
+					<ul class="wanted-label-list">
+						<li>有超大阳台</li>
+						<li>房间非常干净</li>
+						<li>loft</li>
+						<li>室友人很好</li>
+						<li>房东人很好</li>
+						<li>离地铁很近</li>
+						<li>隔音好</li>
+						<li class="haveBr">有不止 <br />一个卫生间</li>
+						<li>装修好看</li>
+						<li>可以短租</li>
+						<li>价格比市价低</li>
+						<li>没有隔断间</li>
+						<li>采光很棒</li>
+						<li>押一付一也可以</li>
+						<li>周围生活方便</li>
+					</ul>
+
+				</div>
+				<div class="letterTittle">
+					<h2>好了，求租信写完了，请给这封出租信简单写一个题目吧</h2>
+					<textarea type="text" name="title" id="title" value="" placeholder="示例：6号线草房的两居主卧转租，大阳台哦" class="wantTittle" oninput="vefity(this,10,50)"></textarea>
+					<p class="p1">多写一点，被看到的可能性越大</p>
+					<p class="p2">最多50字哦</p>
+				</div>
+				<div class="deliver">
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/labelMach.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".deliver>div").on('touchstart', function() {
+			if($("#title").attr("data") === "success" && checkedIsTrue) {
+				$(".loading").show();
+				setTimeout(function() {
+					window.location.href = 'homePage.html';
+				}, 2000)
+			} else {
+				$(".pleaseFill").show();
+			}
+
+		})
+	</script>
+
+</html>

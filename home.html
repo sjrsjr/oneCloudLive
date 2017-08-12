@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>一朵云上住</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body style=" background-attachment: scroll;">
+		<div class="container" style="display: block;">
+			<ul>
+				<li><img src="img/loading.gif"/></li>
+				<li class="loading-text">已完成0%</li>
+			</ul>
+		</div>
+		<div class="thankView test">
+			<ul>
+				<li>谢谢访问，目前不对你开放，送客</li>
+				<li class="sure"></li>
+			</ul>
+		</div>
+		<div class="thankAgree test" >
+			<ul>
+				<li>请先同意用户协议</li>
+				<li class="sure"></li>
+			</ul>
+		</div>
+		<div class="home wrap" style="display: none;">
+			<div class="head">
+				<div class="title">
+
+				</div>
+			</div>
+			<div class="middle">
+				<div class="left">
+					<div class="leftimg">
+
+					</div>
+					<div class="leftbtn"></div>
+				</div>
+				<div class="right">
+					<a class="rightbtn" href="search.html"></a>
+					<div class="rightimg">
+
+					</div>
+				</div>
+
+			</div>
+			<div class="bot">
+				<div>
+					<input type="checkbox"/>
+					<span>我接受</span><a href="protocol.html">《一朵云上住用户协议》</a>
+				</div>
+				<p>请同意用户协议</p>
+				<p>ps：本站欢迎一朵云上住/看房狗真爱粉与个人租房者使用</p>
+			</div>
+
+		</div>
+
+	</body>
+	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/preload.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(".rightbtn").on('touchstart',function(){
+		if($("input")[0].checked==false){
+			$(".thankAgree").show();
+		}
+	})
+	$(".leftbtn").on('touchstart',function(){
+			$(".thankView").show();	
+	
+	})
+
+	</script>
+
+</html>

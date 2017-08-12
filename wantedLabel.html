@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>一朵云上住</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="wantedLetter wrap-no">
+			<!--出租标签正在加载中-->
+			<div class="loading test" style="display: none;">
+				<ul class="load-wrap">
+					<li></li>
+					<li></li>
+					
+				</ul>
+			</div>
+			<div class="pleaseFill test">
+				<ul>
+					<li>请填写完整的信息</li>
+					<li class="sure"></li>
+				</ul>
+			</div>
+			<div class="pleaseSelect test">
+				<ul>
+					<li>最多选三个哦</li>
+					<li class="sure"></li>
+				</ul>
+			</div>
+			<div class="letter-main">
+				<h1>差点忘了告诉你</h1>
+				<div class="wantedLabel">
+					<h2>
+						我有一些优点，值得你把房间租给我&nbsp;<span>(限选三个)</span>
+					</h2>
+					<ul class="wanted-label-list">
+						<li class="haveBr">爱干净<br /> 到不要不要的</li>
+						<li class="haveBr">我可是<br />有正经工作的人</li>
+						<li>做饭好吃到哭</li>
+						<li>开朗大方</li>
+						<li>喜欢收拾做家务</li>
+						<li>有钱</li>
+						<li>守时守信</li>
+						<li>一个安静的人</li>
+						<li>有颜值</li>
+						<li>海龟</li>
+						<li>单身不占地</li>
+						<li>喜欢运动</li>
+						<li>不事儿</li>
+						<li>知道很多好玩的</li>
+						<li>我是学霸</li>
+					</ul>
+
+				</div>
+				<div class="letterTittle">
+					<h2>好了，求租信写完了，请给这封信简单写一个题目</h2>
+					<textarea type="text" name="title" id="title" value="" placeholder="示例：90后可爱妹子求租6号线草房的两居主卧" class="wantTittle"  oninput="vefity(this,10,50)"></textarea>
+					<p class="p1">多写一点，被看到的可能性越大</p>
+					<p class="p2">最多50字哦</p>
+				</div>
+				<div class="deliver">
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/labelMach.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(".deliver>div").on('touchstart',function(){
+		if($("#title").attr("data") === "success" && checkedIsTrue){
+				$(".loading").show();
+				setTimeout(function() {
+					window.location.href = 'homePage.html';
+				}, 2000)
+			}else{
+				$(".pleaseFill").show();
+			}
+	})
+	</script>
+
+</html>

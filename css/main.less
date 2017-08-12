@@ -1,0 +1,1137 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 2/50 * 1rem;
+}
+.px2px(@name, @px) {
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px;
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+html,
+body {
+    height: 100%;
+     overflow-x: hidden;
+}
+//网速很慢
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    ul {
+        width: 100%;
+        .px2rem(margin-top,224);
+        text-align: center;
+        li {
+            img {
+                .px2rem(height,270);
+                .px2rem(margin-bottom,30);
+            }
+            color: #979696;
+            .px2rem(font-size,30);
+        }
+    }
+}
+
+//公共样式
+//最外部 有背景图
+.wrap {
+    width: 100%;
+    overflow-y: scroll;
+}
+//做外部没有背景图
+.wrap-no {
+    background-color: rgb(245,245,245);
+    overflow: scroll;
+}
+//主体内容部分
+.main {
+    .px2rem(width,686);
+    .px2rem(min-height,1200);
+    margin: 0 auto;
+    .px2rem(margin-top,32);
+    background-color: rgb(245,245,245);
+}
+.main-protocol {
+    box-sizing: border-box;
+    .px2rem(padding,32);
+    .px2rem(font-size,26);
+    h1 {
+        .px2rem(font-size,30);
+        text-align: center;
+        .px2rem(margin-bottom,32);
+    }
+    ol {
+        h2 {
+            .px2rem(font-size,28);
+            .px2rem(margin-bottom,32);
+            .px2rem(margin-top,32);
+        }
+        li {
+            .px2rem(line-height,40);
+        }
+    }
+}
+//固定在页面下的两个按钮
+.search_bottom {
+    position: fixed;
+    .px2rem(width,750);
+    .px2rem(height,98);
+    background-color: #fff;
+    z-index: 15;
+    bottom: 0;
+    ul {
+        .px2rem(width,466);
+        .px2rem(height,98);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        li {
+            a,
+            span {
+                display: block;
+                .px2rem(width,170);
+                .px2rem(height,60);
+            }
+        }
+        li:nth-of-type(1) {
+            a {
+                background: url("../img/ss_btnzy@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+            span.test-black {
+                background: url("../img/br_hei@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+        li:nth-of-type(2) {
+            a {
+                background: url("../img/ss_btnwo@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+            span.test-white {
+                background: url("../img/br_bai@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
+.p1,
+.p2,
+.p3 {
+    color: red;
+    .px2rem(font-size,24);
+    display: none;
+}
+//求租信格式
+.wanted-item {
+    .px2rem(width,686);
+    .px2rem(font-size,28);
+    .px2rem(padding-bottom,32);
+    color: #474646;
+    overflow: hidden;
+    .lookHere {
+        color: #25d0c1;
+        .px2rem(font-size,26);
+        .px2rem(padding-bottom,15);
+    }
+    .addChoose {
+        overflow: hidden;
+        .px2rem(padding-bottom,25);
+        .add {
+            float: right;
+            .px2rem(width,44);
+            .px2rem(height,44);
+            .px2rem(margin-right,120);
+            background: url("../img/add@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .chooseMenu {
+        .menu{
+          overflow: hidden;
+          .px2rem(margin-bottom,25);  
+        }
+        .menuList {
+            float: left;
+            .px2rem(width,190);
+            .px2rem(height,90);
+            background: url("../img/r1@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+        }
+        .menuList:nth-of-type(2){
+            background: url("../img/r3@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            .px2rem(margin-left,25);
+        }
+        select {
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 0;
+                color: #736e6e;
+                .px2rem(padding-left,13);
+                .px2rem(padding-top,25);
+                .px2rem(font-size,30);
+            }
+            .down {
+                float: right;
+                .px2rem(margin-right,25);
+                .px2rem(margin-top,20);
+            }
+        .endList{
+            float: right;
+           .px2rem(width,260);
+            .px2rem(height,90);
+            background: url("../img/r3@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            text-align: center; 
+        }
+    }
+    div {
+        .icon,
+        .caseIcon {
+            .px2rem(width,43);
+            .px2rem(height,40);
+            float: left;
+            .px2rem(margin-right,10);
+            .px2rem(margin-top,7);
+        }
+        .carIcon{
+            .px2rem(width,40);
+            .px2rem(height,35); 
+        }
+        .contactIcon {
+            .px2rem(margin-left,20);
+            .px2rem(width,30);
+        }
+        .caseIcon,
+        .personIcon {
+            .px2rem(margin-left,15);
+            .px2rem(width,35);
+        }
+        .wantedIcon {
+            .px2rem(margin-left,15);
+            .px2rem(width,40);
+        }
+        .priceIcon {
+            .px2rem(margin-left,15);
+            .px2rem(width,35);
+        }
+        .px2rem(line-height,50);
+        span {
+            .px2rem(font-size,24);
+            color: #908e8c;
+        }
+    }
+    textarea {
+        .px2rem(width,660);
+        .px2rem(min-height,130);
+        .px2rem(font-size,26);
+        .px2rem(margin-top,32);
+        .px2rem(padding,25);
+        color: #6c6b68;
+        border: 0;
+        background-color: #fff;
+    }
+}
+//用户头像。昵称
+.userInfo {
+    .px2rem(width,686);
+    .px2rem(height,230);
+    overflow: hidden;
+    .head_img {
+        .px2rem(width,150);
+        .px2rem(height,150);
+        border-radius: 50%;
+        background-color: red;
+        margin: 0 auto;
+        .px2rem(margin-top,20);
+        .px2rem(margin-bottom,16);
+    }
+    .personal-refe {
+        text-align: center;
+        .px2rem(font-size,24);
+        span {
+            color: #4d4d4d;
+        }
+    }
+}
+//求租标签
+.label-list {
+    .px2rem(width,750);
+    .px2rem(margin-top,25);
+    li {
+        float: left;
+        .px2rem(font-size,26);
+        .px2rem(width,200);
+        text-align: center;
+        .px2rem(padding-top,25);
+        .px2rem(padding-bottom,25);
+        .px2rem(margin-bottom,28);
+        .px2rem(margin-right,30);
+        background: url("../img/lbg2@2x.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+    li.haveBr {
+        .px2rem(padding-top,8);
+        .px2rem(padding-bottom,8);
+    }
+}
+//验黑验白弹窗
+.test {
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 20;
+    overflow-y: hidden;
+    display: none;
+  
+    ul {
+        .px2rem(width,622);
+        .px2rem(height,362);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .px2rem(margin-left,-310);
+        .px2rem(margin-top,-250);
+        background: url("../img/br_dibua@2x.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+        .px2rem(font-size,32);
+      
+        li:nth-of-type(1) {
+            text-align: center;
+            .px2rem(margin-top,71);
+            .px2rem(margin-bottom,28);
+        }
+        li:nth-of-type(2) {
+            .px2rem(width,264);
+            .px2rem(height,108);
+            margin: 0 auto;
+            background: url("../img/br_btnwod@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        li.sure{
+           background: url("../img/cz_btnok@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%; 
+        }
+    }
+}
+//主页
+.home {
+    .head {
+        width: 100%;
+        .px2rem(height,170);
+        background-color: #fff;
+        .px2rem(margin-top,50);
+        overflow: hidden;
+    }
+    .title {
+        .px2rem(width,490);
+        .px2rem(height,87);
+        margin: 0 auto;
+        .px2rem(margin-top,50);
+        background: url("../img/sy_title@2x.png") 0 0 no-repeat;
+        background-size: contain;
+    }
+    .middle {
+        overflow: hidden;
+        .px2rem(height,760);
+        .left {
+            width: 50%;
+            float: left;
+            .leftimg {
+                .px2rem(width,351);
+                .px2rem(height,153);
+                .px2rem(margin-top,136);
+                .px2rem(margin-left,32);
+                background: url("../img/sy_des@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+            .leftbtn {
+                .px2rem(width,255);
+                .px2rem(height,88);
+                .px2rem(margin-top,50);
+                .px2rem(margin-left,52);
+                background: url("../img/sy_btna@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+        .right {
+            width: 50%;
+            float: left;
+            .rightimg {
+                .px2rem(width,312);
+                .px2rem(height,159);
+                .px2rem(margin-top,30);
+                .px2rem(margin-left,-20);
+                background: url("../img/sy_des2@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+            .rightbtn {
+                display: block;
+                .px2rem(width,255);
+                .px2rem(height,88);
+                .px2rem(margin-top,344);
+                .px2rem(margin-left,80);
+                background: url("../img/sy_btnb@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    .bot {
+        .px2rem(height,420);
+        background-color: #fff;
+        overflow: hidden;
+        text-align: center;
+        .px2rem(font-size,26);
+        div {
+            .px2rem(margin-top,50);
+            .px2rem(font-size,28);
+            input {
+                background: url("../img/sy_check@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+            a {
+                color: #41dfe6;
+                text-decoration: none;
+            }
+        }
+        p:nth-of-type(1) {
+            color: #d1d1d1;
+            .px2rem(margin-top,24);
+        }
+        p:nth-of-type(2) {
+            color: #ada8a7;
+            .px2rem(margin-top,24);
+        }
+    }
+}
+//搜索页面
+.search {
+    .search-no {
+        position: absolute;
+        background-color: #fff;
+        .px2rem(margin-top,164);
+        ul {
+            width: 100%;
+            text-align: center;
+            .px2rem(margin-top,164);
+            .px2rem(font-size,30);
+            color: #a2a2a1;
+            .px2rem(line-height,50);
+        }
+        div {
+            .px2rem(margin-top,80);
+            .px2rem(line-height,60);
+            a {
+                display: block;
+                text-align: center;
+                color: #25d0c1;
+                .px2rem(font-size,26);
+            }
+        }
+    }
+    .main {
+        background-color: transparent;
+        .head {
+            position: absolute;
+            .px2rem(height,100);
+            z-index: 4;
+            .px2rem(margin-top,26);
+            .inp {
+                .px2rem(width,340);
+                .px2rem(height,99);
+                background: url("../img/ss_search@2x.png") 0 0 no-repeat;
+                background-size: contain;
+                text-align: center;
+                float: left;
+                input {
+                    .px2rem(width,270);
+                    border: 0;
+                    .px2rem(margin-top,35);
+                    .px2rem(margin-left,4);
+                    .px2rem(font-size,24);
+                    background-color: transparent;
+                    float: left;
+                }
+                span {
+                    .px2rem(width,32);
+                    .px2rem(height,30);
+                    .px2rem(margin-top,35);
+                    .px2rem(margin-left,20);
+                    float: left;
+                    background: url("../img/ss_sou.png") 0 0 no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+            .search_choose {
+                .px2rem(width,150);
+                .px2rem(padding-left,30);
+                .px2rem(margin-left,10);
+                .px2rem(height,99);
+                float: left;
+                background: url("../img/ss_search2@2x.png") 0 0 no-repeat;
+                background-size: 100% 100%;
+                select {
+                    .px2rem(width,140);
+                    .px2rem(height,99);
+                    .px2rem(font-size,28);
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    background-color: transparent;
+                    border: 0;
+                    background: url("../img/ss_xiala@2x.png") 85% 50% no-repeat;
+                    background-size: 20%;
+                }
+            }
+            .searchBtn {
+                .px2rem(width,129);
+                .px2rem(height,99);
+                float: left;
+                .px2rem(margin-left,25);
+                background: url("../img/ss_btnsou@2x.png") 0 0 no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        .drapList {
+            position: absolute;
+            z-index: 3;
+            .px2rem(width,240);
+            .px2rem(padding-left,48);
+            .px2rem(padding-top,90);
+            .px2rem(margin-top,60);
+            .px2rem(padding-right,34);
+            background: url("../img/drop_bg@2x.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            li {
+                .px2rem(font-size,24);
+                color: #4F504D;
+                .px2rem(margin-bottom,30);
+                .drop_right {
+                    .px2rem(width,14);
+                    .px2rem(height,20);
+                    .px2rem(margin-top,5);
+                    background: url("../img/drop_right@2x.png") 0 0 no-repeat;
+                    background-size: 100% 100%;
+                    float: right;
+                }
+            }
+        }
+        .main_text {
+            .px2rem(width,686);
+            .px2rem(margin-top,150);
+            background-color: #fff;
+            position: absolute;
+            z-index: 2;
+            .messages {
+                .user {
+                    .px2rem(padding,30);
+                    .px2rem(height,220);
+                    .px2rem(border-width,1);
+                    .rightArrow {
+                        .px2rem(width,15);
+                        .px2rem(height,35);
+                        background: url("../img/ss_gengduo@2x.png") 0 0 no-repeat;
+                        background-size: 100% 100%;
+                        float: right;
+                        .px2rem(margin-top,-120);
+                    }
+                    .user_info {
+                        .px2rem(height,120);
+                        .px2rem(font-size,24);
+                        .head_img {
+                            .px2rem(width,110);
+                            .px2rem(height,110);
+                            float: left;
+                            background-color: red;
+                            border-radius: 50%;
+                            .px2rem(margin-right,20);
+                        }
+                        .nackname {
+                            .px2rem(width,490);
+                            .px2rem(height,40);
+                            .px2rem(margin-top,15);
+                            float: left;
+                            color: #71dfed;
+                        }
+                        .release_time {
+                            .px2rem(width,490);
+                            .px2rem(height,40);
+                            .px2rem(margin-top,5);
+                            float: left;
+                            color: #C5C4C4;
+                        }
+                    }
+                    .user_title {
+                        color: #474646;
+                        .px2rem(font-size,32);
+                        .px2rem(margin-top,10);
+                        .px2rem(margin-bottom,10);
+                    }
+                    .user_mes {
+                        .px2rem(font-size,26);
+                        color: #9c9d9a;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                    }
+                    .line {
+                        width: 100%;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+//登记页
+.login {
+    .main-item {
+        .px2rem(width,686);
+        .px2rem(min-height,1200);
+        margin: 0 auto;
+        .px2rem(margin-top,32);
+        text-align: center;
+        .px2rem(font-size,30);
+        ul {
+            width: 100%;
+            .px2rem(min-height,420);
+            background-color: #fff;
+            text-align: center;
+            overflow: hidden;
+            .px2rem(margin-bottom,26);
+            li:nth-of-type(1) a {
+                display: block;
+                .px2rem(width,230);
+                .px2rem(height,100);
+                background: url("../img/dj_btncz.png") 0 0 no-repeat;
+                background-size: contain;
+                margin: 0 auto;
+                .px2rem(margin-top,158);
+                .px2rem(margin-bottom,36);
+            }
+        }
+        ul:nth-of-type(2) {
+            li:nth-of-type(1) a {
+                background: url("../img/dj_btnqz@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+        ul:nth-of-type(3) {
+            li:nth-of-type(1) {
+                .px2rem(margin-top,90);
+                .px2rem(text-indent,40);
+                .xiala {
+                    .px2rem(width,20);
+                    .px2rem(height,20);
+                    .px2rem(margin-top,18);
+                    .px2rem(margin-right,60);
+                    float: right;
+                    background: url("../img/dj_xiala@2x.png") 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+//没创建小房本
+.user_page_no {
+    .user_page_main {
+        background-color: rgb(245,245,245);
+        .px2rem(width,686);
+        .px2rem(min-height,1200);
+        margin: 0 auto;
+        .px2rem(margin-top,32);
+        .user_info {
+            .px2rem(width,686);
+            .px2rem(height,336); //          background-color: pink;
+            overflow: hidden;
+            .head_img {
+                .px2rem(width,150);
+                .px2rem(height,150);
+                border-radius: 50%;
+                background-color: red;
+                margin: 0 auto;
+                .px2rem(margin-top,50);
+                .px2rem(margin-bottom,16);
+            }
+            .nackname {
+                text-align: center;
+                .px2rem(font-size,24);
+                span {
+                    color: #4d4d4d;
+                }
+            }
+            li:nth-of-type(3) {
+                .px2rem(font-size,34);
+                .px2rem(margin-left,40);
+                .px2rem(margin-bottom,20);
+            }
+        }
+        .rent {
+            .px2rem(width,686);
+            .px2rem(height,410);
+            background-color: #fff;
+            text-align: center;
+            overflow: hidden;
+            .px2rem(margin-bottom,26);
+            li:nth-of-type(1) a {
+                display: block;
+                .px2rem(width,270);
+                .px2rem(height,100);
+                background: url("../img/zy_btndian@2x.png") 0 0 no-repeat;
+                background-size: contain;
+                margin: 0 auto;
+                .px2rem(margin-top,142);
+                .px2rem(margin-bottom,36);
+            }
+            li:nth-of-type(2) {
+                .px2rem(width,332);
+                .px2rem(height,26);
+                background: url("../img/zy_wei@2x.png") 0 0 no-repeat;
+                background-size: contain;
+                margin: 0 auto;
+                .px2rem(margin-bottom,36);
+            }
+        }
+        .tips {
+            .px2rem(font-size,28);
+            text-align: center;
+        }
+    }
+}
+//求租页面
+.wanted {
+    .wanted-main {
+        .wantedLetter {
+            .px2rem(margin-top,50);
+            .wanted-title {
+                h1 {
+                    .px2rem(width,520);
+                    margin: 0 auto;
+                    text-align: center;
+                    .px2rem(font-size,34);
+                    font-weight: normal;
+                    .px2rem(margin-bottom,30);
+                    color: #3c3a38;
+                    .text {
+                        float: left;
+                        .px2rem(margin-right,10);
+                    }
+                    .pen {
+                        .px2rem(width,110);
+                        .px2rem(height,120);
+                        float: left;
+                        .px2rem(margin-top,-25);
+                        background: url("../img/qz_bi@2x.png") top right no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+        .wanted-btn {
+            .px2rem(height,150);
+            .okBtn {
+                .px2rem(width,270);
+                .px2rem(height,85);
+                display: block;
+                background: url("../img/qz_btnok@2x.png") 0 0 no-repeat;
+                background-size: contain;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+//求租信
+.wantedLetter {
+    .loading {
+        .px2rem(width,750);
+        .px2rem(min-height,1334);
+        background-color: rgba(0,0,0,0.3);
+        position: absolute;
+        z-index: 1;
+        .load-wrap {
+            .px2rem(width,642);
+            .px2rem(height,483);
+            background: url("../img/cz_wenzi@2x.png") 0 0 no-repeat;
+            background-size: contain; //          .px2rem(margin-left,54);
+            //          .px2rem(margin-top,362);
+            text-align: center;
+            overflow: hidden;
+            li:nth-of-type(1) {
+                .px2rem(width,160);
+                .px2rem(height,160);
+                background: url("../img/loading.gif") 0 0 no-repeat;
+                background-size: 100% 100%;
+                margin: 0 auto;
+                .px2rem(margin-top,50);
+                .px2rem(margin-bottom,20);
+            }
+            li:nth-of-type(2) {
+                .px2rem(width,225);
+                .px2rem(height,50);
+                margin: 0 auto;
+                background: url("../img/cz_toudi@2x.png") 0 0 no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    h1 {
+        .px2rem(width,750);
+        .px2rem(height,110);
+        .px2rem(font-size,34);
+        color: #3c3a38;
+        text-align: center;
+        .px2rem(line-height,110);
+        font-weight: normal;
+    }
+    .wantedLabel {
+        .px2rem(padding,32);
+        overflow: hidden;
+        background-color: #fff;
+        h2 {
+            .px2rem(font-size,28);
+            color: #464545;
+            font-weight: normal;
+            .px2rem(margin-bottom,32);
+            span {
+                .px2rem(font-size,24);
+                color: #e7e8e5;
+            }
+        }
+        .wanted-label-list {
+            .px2rem(width,750);
+            li {
+                float: left;
+                .px2rem(font-size,26);
+                .px2rem(width,200);
+                text-align: center;
+                .px2rem(padding-top,35);
+                .px2rem(padding-bottom,35);
+                .px2rem(margin-bottom,28);
+                .px2rem(margin-right,30);
+            }
+            li.haveBr {
+                .px2rem(padding-top,10);
+                .px2rem(padding-bottom,15);
+            }
+        }
+    }
+    .letterTittle {
+        .px2rem(width,750);
+        .px2rem(height,184);
+        h2 {
+            .px2rem(height,92);
+            .px2rem(line-height,92);
+            .px2rem(font-size,28);
+            .px2rem(margin-left,32);
+            color: #464545;
+            font-weight: normal;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            .px2rem(padding,10);
+            .px2rem(min-height,80);
+            .px2rem(font-size,24);
+            color: #ada8a7;
+            border: 0;
+        }
+    }
+    .deliver {
+        .px2rem(height,162);
+        div {
+            .px2rem(width,361);
+            .px2rem(height,88);
+            display: block;
+            background: url("../img/qz_btntou@2x.png") 0 0 no-repeat;
+            background-size: contain;
+            margin: 0 auto;
+            .px2rem(margin-top,57);
+        }
+    }
+}
+//出租
+.rent {
+    .uploadPhoto {
+        .px2rem(width,686);
+        .upload-info {
+            .px2rem(height,120);
+            .px2rem(line-height,120);
+            span {
+                .px2rem(font-size,28);
+            }
+            a {
+                input {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    opacity: 0;
+                }
+            }
+        }
+        .photo-area {
+            ul {
+                li {
+                    .px2rem(width,120);
+                    .px2rem(height,120);
+                    .px2rem(margin-right,10);
+                    background-color: pink;
+                    position: relative;
+                    display: inline-block;
+                    .closeBtn {
+                        .px2rem(width,46);
+                        .px2rem(height,39);
+                        position: absolute;
+                        background: url("../img/cz_btncha@2x.png") 0 0 no-repeat;
+                        background-size: contain;
+                        .px2rem(top,-15);
+                        .px2rem(right,-10);
+                    }
+                }
+            }
+            div {
+                text-align: right;
+                .px2rem(font-size,24);
+                color: #C2C2C2;
+                .px2rem(margin-top,42);
+            }
+        }
+    }
+}
+//个人主页
+.personal-homePage {
+    .homePage-main {
+        background-color: rgb(245,245,245);
+        .px2rem(width,686);
+        .px2rem(min-height,1200);
+        margin: 0 auto;
+        .px2rem(margin-top,32);
+        h1 {
+            .px2rem(font-size,34);
+            color: #4f504d;
+            .px2rem(text-indent,20);
+            .px2rem(margin-bottom,8);
+            font-weight: normal;
+        }
+        .personal-info {
+            .px2rem(width,686);
+            .px2rem(height,230); //          background-color: pink;
+            overflow: hidden;
+            .head_img {
+                .px2rem(width,150);
+                .px2rem(height,150);
+                border-radius: 50%;
+                background-color: red;
+                margin: 0 auto;
+                .px2rem(margin-top,20);
+                .px2rem(margin-bottom,16);
+            }
+            .personal-refe {
+                text-align: center;
+                .px2rem(font-size,24);
+                span {
+                    color: #4d4d4d;
+                }
+            }
+        }
+        .personal-propertyBook {
+            .propertyBook {
+                width: 100%;
+                .px2rem(height,366);
+                background-color: #fff;
+                .propertyBook-main {
+                    .px2rem(height,140);
+                    .px2rem(width,646);
+                    .px2rem(margin-top,38);
+                    .px2rem(margin-bottom,38);
+                    .property-img {
+                        .px2rem(height,140);
+                        .px2rem(width,140);
+                        float: left;
+                        .px2rem(margin-right,20);
+                        background-color: pink;
+                    }
+                    .property-info {
+                        .px2rem(width,486);
+                        float: left;
+                        .px2rem(font-size,24);
+                        color: #6c6d68;
+                        .title {
+                            .px2rem(font-size,28);
+                            color: #4d4d4d;
+                        }
+                        .release_time {
+                            .px2rem(margin-top,15);
+                            .px2rem(margin-bottom,12);
+                        }
+                        .property-refe {
+                            .imgNum {
+                                color: #e9e9e9;
+                                float: left;
+                            }
+                            .vetify {
+                                float: right;
+                                .white {
+                                    color: #da5364;
+                                    .px2rem(margin-right,20);
+                                }
+                            }
+                        }
+                    }
+                }
+                .edit-propertyBook {
+                    .px2rem(height,162);
+                    li {
+                        .px2rem(width,260);
+                        float: left;
+                        .px2rem(margin-left,50);
+                        a {
+                            .px2rem(width,260);
+                            .px2rem(height,88);
+                            display: block;
+                            background: url("../img/zy_btnguan@2x.png") 0 0 no-repeat;
+                            background-size: contain;
+                        }
+                        a.gai {
+                            background: url("../img/zy_btngai@2x.png") 0 0 no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+        .vip-member {
+            width: 100%;
+            .px2rem(height,356);
+            background-color: #fff;
+            overflow: hidden;
+            ul {
+                .px2rem(margin-top,18);
+                .px2rem(margin-bottom,42);
+                li {
+                    margin: 0 auto;
+                    .px2rem(height,100);
+                    .px2rem(width,646);
+                    a {
+                        .px2rem(width,196);
+                        .px2rem(height,92);
+                        display: block;
+                        background: url("../img/zy_yi@2x.png") 0 0 no-repeat;
+                        background-size: contain;
+                        float: left;
+                        .px2rem(margin-right,18);
+                    }
+                    a.twoCloud {
+                        background: url("../img/zy_er@2x.png") 0 0 no-repeat;
+                        background-size: contain;
+                    }
+                    a.threeCloud {
+                        background: url("../img/zy_san@2x.png") 0 0 no-repeat;
+                        background-size: contain;
+                    }
+                    .right {
+                        .px2rem(width,430);
+                        float: left;
+                        span {
+                            float: left;
+                            width: 100%;
+                            .px2rem(font-size,24);
+                            color: #f77686;
+                            .px2rem(margin-top,6);
+                        }
+                        .vipInfo {
+                            color: #6c6d68;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//别人的主页
+.other-homePage {
+    .other-main {
+        background-color: transparent;
+        overflow: hidden;
+        .other-info {
+            .userInfo {
+                height: auto;
+                .px2rem(margin-bottom,0);
+                .top {
+                    .px2rem(height,120);
+                    .px2rem(padding,10);
+                    background-color: rgba(255,255,255,0.5);
+                    position: relative;
+                    .head_img {
+                        position: absolute;
+                        z-index: 2;
+                        left: 50%;
+                        .px2rem(margin-left,-75);
+                        .px2rem(margin-top,45);
+                    }
+                }
+                .bot {
+                    .px2rem(height,60);
+                    background-color: #fff;
+                    .px2rem(padding-top,80);
+                    .px2rem(padding-bottom,20);
+                }
+            }
+            .label-list {
+                background-color: #fff;
+                .px2rem(height,120);
+                .px2rem(margin-top,0);
+            }
+            .about-info {
+                background-color: #fff;
+                .px2rem(padding,10);
+                .px2rem(padding-top,30);
+                .title {
+                    .px2rem(font-size,34);
+                    color: #747474;
+                }
+                .release_time {
+                    text-align: right;
+                    .px2rem(font-size,24);
+                    color: #6c6d68;
+                    .px2rem(margin-top,34);
+                }
+            }
+        }
+        .homeBook-info {
+            .px2rem(padding-top,40);
+            .px2rem(padding-bottom,40);
+            background-color: rgb(245,245,245);
+            //房间照片
+            .homePhoto {
+                //      .px2rem(width,686);
+                //      .px2rem(height,418);
+                //      background-color: red;
+                .px2rem(margin-bottom,38);
+            }
+        }
+    }
+}

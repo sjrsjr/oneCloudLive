@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>一朵云上住</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<div class="wanted wrap-no rent">
+			<div class="pleaseFill test">
+				<ul>
+					<li>请填写完整的信息</li>
+					<li class="sure"></li>
+				</ul>
+			</div>
+			<div class="wanted-main main">
+				<ul class="wantedLetter">
+					<li class="wanted-title">
+						<h1><span class="text">现在我们来写一份出租信</span><span class="pen"></span></h1>
+
+					</li>
+					<li class="wanted-item">
+						<p class="lookHere">你好请看过来，我这里有房子出租。</p>
+						<div class="addChoose">房子附近的地铁站有这几个，交通还不错 <span class="add"></span></div>
+						<div class="chooseMenu">
+							<div class="menu">
+								<div class="menuList">
+									<select name="">
+										<option value="朝阳门">朝阳门</option>
+									</select>
+									<div class="down"><img src="img/down@2x.png" width="13" /></div>
+
+								</div>
+								<div class="menuList">
+									<select name="">
+										<option value="1号线">1号线</option>
+									</select>
+									<div class="down"><img src="img/down@2x.png" width="13" /></div>
+
+								</div>
+								<div class="endList">
+									<select name="">
+										<option value="天安门东">天安门东</option>
+									</select>
+									<div class="down"><img src="img/down@2x.png" width="13" /></div>
+
+								</div>
+							</div>
+
+						</div>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class="icon"></div>房子的情况是这样的。<span>（讲述房子的地点，交通地铁，几居室，家具家电等)</span></div>
+						<textarea name="textCaseR" id="textCaseR" rows="" cols="" placeholder="请点击输入" oninput="vefity(this,50,300)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+						<p class="p3">为避免刷屏与马甲，地点信息点击OK后，只可修改3次</p>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class="icon priceIcon"></div>房子的价格和租期，请你看一下（1K=1000)</div>
+						<textarea name="textPriceR" id="textPriceR" placeholder="请点击输入" oninput="vefity(this,5,300)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class="icon personIcon"></div>房东/室友/中介的情况，我必须与你介绍清楚</div>
+
+						<textarea name="textHostR" id="textHostR" placeholder="请点击输入" oninput="vefity(this,100,1000)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class="icon wantedIcon"></div>我希望来租房的你，是这样的</div>
+
+						<textarea name="textPersonR" id="textPersonR" placeholder="请点击输入" oninput="vefity(this,50,100)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class=" caseIcon"></div>在这里简单介绍下我的情况，你会相信我说的话</div>
+						<textarea name="textMeR" id="textMeR" placeholder="请点击输入" oninput="vefity(this,50,300)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+					</li>
+					<li class="wanted-item">
+						<div>
+							<div class="icon contactIcon"></div>请你记一下我的联系微信号/常用邮箱，联系我就行</div>
+						<textarea name="textContactR" id="textContactR" placeholder="请点击输入" oninput="vefity(this,50,300)"></textarea>
+						<p class="p1">多写一点，被看到的可能性越大</p>
+						<p class="p2">最多300字哦</p>
+					</li>
+				</ul>
+				<div class="uploadPhoto">
+					<div class="upload-info"><span>你想看的房间照片，我上传到这里了</span>
+						<a href=""><input type="file" name="" id="" value="（点我上传）" />（点我上传）</a>
+					</div>
+					<div class="photo-area">
+						<ul>
+							<li>1
+								<span class="closeBtn">
+							</li>
+							<li>2<span class="closeBtn"></span></li>
+							<li>3<span class="closeBtn"></li>
+							<li>4<span class="closeBtn"></li>
+							<li>5<span class="closeBtn"></li>
+						</ul>
+						<div>共<span class="photoNum">5</span>张，上传成功</div>
+				</div>
+			</div>
+			<div class="wanted-btn">
+				<div class="okBtn"></div>
+			</div>
+		</div>
+
+		</div>
+
+	</body>
+	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/labelMach.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.closeBtn').each(function(index, val) {
+			$(val).on('touchend', function() {
+				$(this).parent().remove();
+				$(".photoNum").text($(".photo-area li").length);
+			})
+		})
+		$(".okBtn").on('touchstart', function() {
+			console.log(($("#textCaseR").attr("data") === "success")&& ($("#textPriceR").attr("data") === "success") )
+			var isTrue = (($("#textCaseR").attr("data") === "success") && ($("#textPriceR").attr("data") === "success") && ($("#textHostR").attr("data") === "success") && ($("#textPersonR").attr("data") === "success") && ($("#textMeR").attr("data") === "success") && ($("#textContactR").attr("data") === "success"));
+			console.log(isTrue);
+			if(isTrue) {
+				window.location.href = "rentLabel.html";
+			} else {
+				$(".pleaseFill").show();
+			}
+		})
+
+		$(".add").click(function() {
+			$(".chooseMenu").append($('.menu:first').clone());
+		})
+	</script>
+
+</html>

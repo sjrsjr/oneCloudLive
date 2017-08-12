@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<div class="other-homePage wrap">
+			<!--打开别人的验黑-->
+			<div class="test testBlack" style="display: none;">
+				<ul>
+					<li>干得好！干得好！干得好！<br />解气的事情要说三遍！ 
+					</li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="test testWhite" >
+				<ul>
+					<li>干得好！干得好！干得好！<br /> 好消息要让大家都知道！
+					</li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="main other-main">
+				<div class="other-info ">
+					<div class="userInfo">
+						<div class="top">
+							<div class="head_img"></div>
+						</div>
+						<div class="bot">
+							<div class="personal-refe"><span class="nackname">Angelina</span>&nbsp;<span class="sign">女神</span></div>
+						</div>
+						
+					</div>
+					<ul class="label-list">
+						<li>有超大阳台</li>
+						<li>有超大阳台</li>
+						<li class="haveBr">有不止 <br />一个卫生间 </li>
+					</ul>
+					<div class="about-info">
+						<div class="title">6号线草房的两居主卧转租，大阳台哦</div>
+						<div class="release_time"><span>2016年11月3日&nbsp;18:25</span></div>
+					</div>
+				</div>
+				<div class="homeBook-info">
+					<ul>
+						<li class="wanted-item">
+						<div><div class="icon"></div>你好请看过来，我有房子出租，这是房子情况</div>
+						<textarea name="" rows="" cols=""placeholder="请点击输入"disabled="disabled">计划赶不上变化，因工作原因转租一间房，位于6号线草房的北京像素地铁站，朝东次卧，洗衣机，冰箱，厨房，热水器，双人床，主卧独卫。</textarea>
+					</li>
+					<li class="wanted-item">
+						<div><div class="icon priceIcon"></div>房子的价格和租期，请你看一下</div>
+						
+						<textarea name="" rows="" cols=""placeholder="请点击输入"disabled="disabled">2500,押一付三，到17年5月，网费我已交完。</textarea>
+					</li>
+					<li  class="wanted-item">
+						<div><div class="icon personIcon"></div>室友/房东/中介的情况，我必须和你介绍清楚</div>
+					
+						<textarea name="" rows="" cols=""placeholder="请点击输入"disabled="disabled">阳隔住两个女孩，朝北次卧住着一个男孩，但是常年出差，基本见不到人。</textarea>
+					</li>
+					<li  class="wanted-item">
+						<div><div class="icon wantedIcon"></div>我希望来租房的你，是这样的</div>
+					
+						<textarea name="" rows="" cols=""placeholder="请点击输入"disabled="disabled">希望你有正经工作，不是情侣，可以押一付三。</textarea>
+					</li>
+					<li  class="wanted-item">
+						<div><div class="caseIcon"></div>简单介绍下我的情况，你会相信我说的话</div>
+					
+						<textarea name="" rows="" cols=""placeholder="请点击输入" disabled="disabled">我是做服装设计的，无不良嗜好，短发，不矫情，不做作，爱干净，不吸烟。</textarea>
+					</li>
+					<li  class="wanted-item">
+						<div><div class="icon contactIcon"></div>请你记一下我的联系微信号/常用邮箱</div>
+						<textarea name="" rows="" cols=""placeholder="请点击输入"disabled="disabled">微信37338383838，欢迎勾搭，备注（一朵云上住）</textarea>
+					</li>
+					
+					</ul>
+					<div class="homePhoto"></div>
+				</div>
+
+			</div>
+			<div class="search_bottom testBtn">
+				<ul>
+					<li>
+						<span href="" class="test-black"></span>
+					</li>
+					<li>
+						<span href="" class="test-white"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/labelMach.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	//用来存储验黑的次数
+	var numBlack=0;
+	$(".test-black").on('touchstart',function(){
+		$(".testBlack").show();
+		numBlack++;
+		console.log(numBlack);
+	})
+	//用来存储验白的次数
+	var numWhite=0;
+	$(".test-white").on('touchstart',function(){
+		$(".testWhite").show();
+		numWhite++;
+	})
+	
+	</script>
+
+</html>
