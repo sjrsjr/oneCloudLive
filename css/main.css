@@ -595,19 +595,19 @@ body {
   background: url("../img/dj_xiala@2x.png") 0 0 no-repeat;
   background-size: contain;
 }
-.user_page_no .user_page_main {
+.space-empty .space-empty-main {
   background-color: #f5f5f5;
   width: 6.86rem;
   min-height: 12rem;
   margin: 0 auto;
   margin-top: 0.32rem;
 }
-.user_page_no .user_page_main .user_info {
+.space-empty .space-empty-main .user_info {
   width: 6.86rem;
   height: 3.36rem;
   overflow: hidden;
 }
-.user_page_no .user_page_main .user_info .head_img {
+.space-empty .space-empty-main .user_info .head_img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -616,27 +616,27 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0.16rem;
 }
-.user_page_no .user_page_main .user_info .nackname {
+.space-empty .space-empty-main .user_info .nackname {
   text-align: center;
   font-size: 0.24rem;
 }
-.user_page_no .user_page_main .user_info .nackname span {
+.space-empty .space-empty-main .user_info .nackname span {
   color: #4d4d4d;
 }
-.user_page_no .user_page_main .user_info li:nth-of-type(3) {
+.space-empty .space-empty-main .user_info li:nth-of-type(3) {
   font-size: 0.34rem;
   margin-left: 0.4rem;
   margin-bottom: 0.2rem;
 }
-.user_page_no .user_page_main .rent {
+.space-empty .space-empty-main .rent {
   width: 6.86rem;
   height: 4.1rem;
   background-color: #fff;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 0.26rem;
+  margin-bottom: 0.35rem;
 }
-.user_page_no .user_page_main .rent li:nth-of-type(1) a {
+.space-empty .space-empty-main .rent li:nth-of-type(1) a {
   display: block;
   width: 2.7rem;
   height: 1rem;
@@ -646,7 +646,7 @@ body {
   margin-top: 1.42rem;
   margin-bottom: 0.36rem;
 }
-.user_page_no .user_page_main .rent li:nth-of-type(2) {
+.space-empty .space-empty-main .rent li:nth-of-type(2) {
   width: 3.32rem;
   height: 0.26rem;
   background: url("../img/zy_wei@2x.png") 0 0 no-repeat;
@@ -654,9 +654,8 @@ body {
   margin: 0 auto;
   margin-bottom: 0.36rem;
 }
-.user_page_no .user_page_main .tips {
-  font-size: 0.28rem;
-  text-align: center;
+.space-empty .space-empty-main .follow {
+  width: 100%;
 }
 .wanted .wanted-main .wantedLetter {
   margin-top: 0.5rem;
