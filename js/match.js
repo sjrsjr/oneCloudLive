@@ -156,12 +156,12 @@ if(dpr >=3) {
 		"backgroundSize": "100% 100%"
 	    
 	});
-	$(".user_page_no .rent a").css({
+	$(".space-empty .rent a").css({
 		"background": "url(img/zy_btndian@3x.png) no-repeat",
 		"backgroundSize": "100% 100%"
 	    
 	});
-	$(".user_page_no .rent li:nth-of-type(2)").css({
+	$(".space-empty .rent li:nth-of-type(2)").css({
 		"background": "url(img/zy_wei@3x.png) no-repeat",
 		"backgroundSize": "100% 100%"
 	    
