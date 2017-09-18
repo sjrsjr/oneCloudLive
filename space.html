@@ -3,128 +3,419 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>一朵云上住</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>一朵云上住</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
 </head>
 
 <body>
 <div class="wrap space">
-  <div class="main space-main">
+    <!--转发弹框-->
+    <div class="test testShare">
+        <div class="mask"></div>  <!--遮罩-->
+        <div class="share-box">
+            <h3>转发举手之劳，领现金红包</h3>
 
-    <!-- 用户信息 -->
-    <div class="info">
-      <div class="avatar"></div>
-      <div class="name">
-        <span>Angelina</span>
-        <span>女神</span>
-      </div>
-    </div>
+            <div class="clearfix wxbox">
+                <span class="wx-btn"></span>
+                <span class="pyq-btn"></span>
+            </div>
 
-    <!-- 我的房本信息 -->
-    <div>
-      <h1 class="title-my">我的小房本</h1>
-      <a class="create" href="create.html"></a>
-    </div>
-
-    <div class="project">
-      <div class="project-img">
-        <div class="count-photo">
-          5张
+            <p>转发这个小房本，帮TA解决租房大事！</p>
+            <p>一朵云上住将获得随机红包金额的10~20%作为红包服务费</p>
         </div>
-      </div>
-      <div class="project-info">
-        <div class="title">6号线草房的两居主卧转租，大阳台哦</div>
-        <div class="detail">
-          <div class="time">
-            <img src="img/time@2x.png" alt="">
-            7/23
-          </div>
-          <div class="like">
-            <img src="img/yanbai@2x.png" alt="">
-            10
-          </div>
-          <div class="dislike">
-            <img src="img/yanhei@2x.png" alt="">
-            5
-          </div>
-          <div class="count">
-            <img src="img/count@2x.png" alt="">
-            10/20
-          </div>
+        <div class="closeShare"></div>
+    </div>
+
+    <!-- 弹框：关闭小房本 -->
+    <div class="test closehouse">
+        <div class="mask"></div>
+        <ul>
+            <li class="text-close">
+            </li>
+            <li class="close-condition clearfix">
+                <a href="#" class="close-l"></a>
+                <a href="#" class="close-r"></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--再次开放确认弹窗-->
+    <div class="test testOpen">
+        <div class="mask"></div>
+        <ul>
+            <li class="show-again"></li>
+            <li class="sure"></li>
+        </ul>
+    </div>
+
+
+    <!--页面主体-->
+    <div class="main space-main">
+
+        <!-- 用户信息 -->
+        <div class="info">
+            <div class="avatar">
+                <img src="img/headimg.jpg" alt="">
+            </div>
+            <div class="name">
+                <span>Angelina</span>
+                <span>女神</span>
+            </div>
         </div>
-      </div>
-      <ul class="control">
-        <li>
-          <a href="#"></a>
-        </li>
-        <li class="middle">
-          <a href="spaceEmpty.html" class="edit"></a>
-        </li>
-        <li>
-          <a href="spaceEmpty.html" class="share"></a>
-        </li>
-      </ul>
+
+        <!-- 我的房本信息-->
+        <div>
+            <h1 class="title-my">我的小房本</h1>
+            <a class="create" href="create.html"></a>
+        </div>
+
+
+        <!-- 一个小房本模块 A-->
+        <div class="project clearfix">
+            <div class="project-img">
+                <div class="count-photo">
+                    5张
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="title">6号线草房的两居主卧转租，大阳台哦</div>
+                <div class="detail">
+                    <div class="time">
+                        <img src="img/time@2x.png" alt="">
+                        7/23
+                    </div>
+                    <div class="like">
+                        <img src="img/yanbai@2x.png" alt="">
+                        10
+                    </div>
+                    <div class="dislike">
+                        <img src="img/yanhei@2x.png" alt="">
+                        5
+                    </div>
+                    <div class="count">
+                        <img src="img/count@2x.png" alt="">
+                        10/20
+                    </div>
+                </div>
+            </div>
+
+            <!--按钮-->
+            <ul class="control">
+                <li class="closehouse-btn">
+                    <a href="#"></a>
+                </li>
+                <li class="middle">
+                    <a href="spaceEmpty.html" class="edit"></a>
+                </li>
+                <li>
+                    <a class="sharebtn"></a>
+
+                </li>
+            </ul>
+
+            <!--按钮 （关闭小房本之后）-->
+            <ul class="open-agin">
+                <li class="open-again-btn">
+                    <a href="#"></a>
+                    <p>别人都看不到小房本啦，江湖再见</p>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 一个小房本模块 B-->
+        <div class="project clearfix">
+            <div class="project-img">
+                <div class="count-photo">
+                    4张
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="title">6号线草房的两居主卧转租，大阳台哦</div>
+                <div class="detail">
+                    <div class="time">
+                        <img src="img/time@2x.png" alt="">
+                        7/23
+                    </div>
+                    <div class="like">
+                        <img src="img/yanbai@2x.png" alt="">
+                        10
+                    </div>
+                    <div class="dislike">
+                        <img src="img/yanhei@2x.png" alt="">
+                        5
+                    </div>
+                    <div class="count">
+                        <img src="img/count@2x.png" alt="">
+                        10/20
+                    </div>
+                </div>
+            </div>
+
+            <!--按钮-->
+            <ul class="control">
+                <li class="closehouse-btn">
+                    <a href="#"></a>
+                </li>
+                <li class="middle">
+                    <a href="spaceEmpty.html" class="edit"></a>
+                </li>
+                <li>
+                    <a class="sharebtn"></a>
+
+                </li>
+            </ul>
+
+            <!--按钮 （关闭小房本之后）-->
+            <ul class="open-agin">
+                <li class="open-again-btn">
+                    <a href="#"></a>
+                    <p>别人都看不到小房本啦，江湖再见</p>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 红包租房 -->
+        <h1>我的钱包</h1>
+        <div class="wallet">
+            用红包租房更方便
+            <a href="#"></a>
+        </div>
+
+        <h1>成为一朵云上住会员</h1>
+        <div class="vip-member">
+            <ul>
+                <li>
+                    <a href="http://mp.weixin.qq.com/bizmall/mallshelf?t=mall/list&biz=MzA5NTkwNTM1Mw==&shelf_id=1&showwxpaytitle=1&scene=1#wechat_redirect"
+                       class="oneCloud"></a>
+                    <p class="right">
+                        <span class="vipInfo">看房狗官方微博代发1次</span>
+                        <span class="price">￥7.99</span>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://mp.weixin.qq.com/bizmall/mallshelf?t=mall/list&biz=MzA5NTkwNTM1Mw==&shelf_id=1&showwxpaytitle=1&scene=1#wechat_redirect"
+                       class="twoCloud"></a>
+                    <p class="right">
+                        <span class="vipInfo">看房狗微信【会员】预约推送5次</span>
+                        <span class="price">￥13.14</span>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://mp.weixin.qq.com/bizmall/mallshelf?t=mall/list&biz=MzA5NTkwNTM1Mw==&shelf_id=1&showwxpaytitle=1&scene=1#wechat_redirect"
+                       class="threeCloud"></a>
+                    <p class="right">
+                        <span class="vipInfo">一朵云+两朵云综合服务</span>
+                        <span class="price">￥18.99</span>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://mp.weixin.qq.com/bizmall/mallshelf?t=mall/list&biz=MzA5NTkwNTM1Mw==&shelf_id=1&showwxpaytitle=1&scene=1#wechat_redirect"
+                       class="fourCloud"></a>
+                    <p class="right">
+                        <span class="vipInfo">看房狗微信头条推送1次</span>
+                        <span class="price">￥23.33</span>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://mp.weixin.qq.com/bizmall/mallshelf?t=mall/list&biz=MzA5NTkwNTM1Mw==&shelf_id=1&showwxpaytitle=1&scene=1#wechat_redirect"
+                       class="fiveCloud"></a>
+                    <p class="right">
+                        <span class="vipInfo">租房万事通咨询</span>
+                        <span class="price">￥23.33</span>
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+
     </div>
 
-    <!-- 红包租房 -->
-    <h1>我的钱包</h1>
-    <div class="wallet">
-      用红包租房更方便
-      <a href="#"></a>
+    <!-- footer -->
+    <div class="footer">
+        <a class="home" href="search.html"></a>
+        <a class="space" href="#"></a>
     </div>
 
-    <h1>成为一朵云上住会员</h1>
-    <div class="vip-member">
-      <ul>
-        <li>
-
-          <a href="#" class="oneCloud"></a>
-          <p class="right">
-            <span class="vipInfo">看房狗微信公众号5次推送</span>
-            <span class="price">￥4.19</span>
-          </p>
-        </li>
-        <li>
-
-          <a href="#" class="twoCloud"></a>
-          <p class="right">
-            <span class="vipInfo">一朵云服务+租房咨询服务</span>
-            <span class="price">￥6.99</span>
-          </p>
-        </li>
-        <li>
-
-          <a href="#" class="threeCloud"></a>
-          <p class="right">
-            <span class="vipInfo">一朵云+两朵云+租房反黑法律咨询一次</span>
-            <span class="price">￥11.11</span>
-          </p>
-
-        </li>
-      </ul>
-
-    </div>
-
-  </div>
-  <div class="search_bottom">
-    <ul>
-      <li>
-        <a href="search.html"></a>
-      </li>
-      <li>
-        <a href="#"></a>
-      </li>
-    </ul>
-  </div>
 </div>
 
 </body>
 <script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var projects = document.getElementsByClassName('project')
+    if (projects.length >= 2) {
+        $(document.getElementsByClassName('create')[0]).css('display', 'none')
+    }
+    /*分享弹框*/
+    $(".sharebtn").on('click', function () {
+        $(".testShare").show();
+        $(".wx-btn").on('click', function () {
+            $(".testShare").hide();
+            //添加微信接口
+        })
+        $(".pyq-btn").on('click', function () {
+            $(".testShare").hide();
+            //添加朋友圈接口
+        })
+        $(".testShare .mask").on('click', function () {
+            $(".testShare").hide();
+        })
+        $(".closeShare").on('click', function () {
+            $(".testShare").hide();
+        })
 
+    })
+
+    /*/!*关闭小房本弹框*!/
+    var cloud;  //一朵云交易
+    var other;  //其他渠道
+
+    $(".closehouse-btnA").on('click', function () {
+
+        $(".closehouseA").show();
+
+        /!*一朵云租出去*!/
+        $(".closehouseA .close-condition .close-l").on('click', function () {
+            $(".closehouseA").hide();
+            cloud++;
+            $(".closehouse-btnA").parent().hide();
+            $(".project .open-aginA").show();
+
+
+        });
+        /!*其他方式租出去*!/
+        $(".closehouseA .close-condition .close-r").on('click', function () {
+            $(".closehouseA").hide();
+            other++;
+            $(".closehouse-btnA").parent().hide();
+            $(".project .open-aginA").show();
+        });
+        $('.closehouseA .mask').on('click', function () {
+            $(".closehouseA").hide();
+        })
+
+    });
+
+
+    /!*再次开启小房本*!/
+    $(".open-aginA .open-again-btn").on('click', function () {
+        $(".testOpenA").show();
+        $(".testOpenA .sure").on('click', function () {
+            $(".testOpenA").hide();
+            $(".closehouse-btnA").parent().show();
+            $(".project .open-aginA").hide();
+
+        });
+        $('.closehouseA .mask').on('click', function () {
+            $(".closehouseA").hide();
+        })
+    });
+
+
+    // B
+
+    $(".closehouse-btnB").on('click', function () {
+
+        $(".closehouseB").show();
+
+        /!*一朵云租出去*!/
+        $(".closehouseB .close-condition .close-l").on('click', function () {
+            $(".closehouseB").hide();
+            cloud++;
+            $(".closehouse-btnB").parent().hide();
+            $(".project .open-aginB").show();
+
+
+        });
+        /!*其他方式租出去*!/
+        $(".closehouseB .close-condition .close-r").on('click', function () {
+            $(".closehouseB").hide();
+            other++;
+            $(".closehouse-btnB").parent().hide();
+            $(".project .open-aginB").show();
+        });
+        $('.closehouseB .mask').on('click', function () {
+            $(".closehouseB").hide();
+        })
+
+    });
+
+
+    /!*再次开启小房本*!/
+    $(".open-aginB .open-again-btn").on('click', function () {
+        $(".testOpenB").show();
+        $(".testOpenB .sure").on('click', function () {
+            $(".testOpenB").hide();
+            $(".closehouse-btnB").parent().show();
+            $(".project .open-aginB").hide();
+
+        });
+        $('.closehouseB .mask').on('click', function () {
+            $(".closehouseB").hide();
+        })
+    });*/
+
+    /*关闭小房本弹框*/
+    var cloud;  //一朵云交易
+    var other;  //其他渠道
+    var that;
+    /*关闭*/
+    $(".project").each(function (idx) {
+        that = $(this);
+        /*关闭确认*/
+        that.find(".closehouse-btn").on('click',function () {
+            console.log(that);
+            $(".closehouse").show(); //弹框出现
+            /*一朵云租出去*/
+            $(".closehouse .close-condition .close-l").on('click', function () {
+                $(".closehouse").hide();
+                cloud++;
+                that.find(".control").hide();
+                that.find(".open-agin").show();
+            });
+            /*其他方式租出去*/
+            $(".closehouse .close-condition .close-r").on('click', function () {
+                $(".closehouse").hide();
+                other++;
+                that.find(".control").hide();
+                that.find(".open-agin").show();
+            });
+            $('.closehouse .mask').on('click', function () {
+                $(".closehouse").hide();
+            })
+        })
+
+
+        /*再次开启确认*/
+        that.find(".open-agin .open-again-btn").on('click', function () {
+            console.log(that);
+            $(".testOpen").show();
+            $(".testOpen .sure").on('click', function () {
+                $(".testOpen").hide();
+                that.find(".control").show();
+                that.find(".open-agin").hide();
+
+            });
+            $('.closehouse .mask').on('click', function () {
+                $(".closehouse").hide();
+            })
+        });
+
+    })
+
+
+
+
+</script>
 
 </html>

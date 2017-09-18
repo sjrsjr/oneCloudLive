@@ -2,110 +2,155 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>一朵云上住</title>
-		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-	</head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>一朵云上住 - 求租</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/picker.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
 
-	<body>
-		<div class="wanted wrap-no">
-			<div class="pleaseFill test">
-				<ul>
-					<li>请填写完整的信息</li>
-					<li class="sure"></li>
-				</ul>
-			</div>
-			<div class="wanted-main main">
-				<ul class="wantedLetter">
-					<li class="wanted-title">
-						<h1><span class="text">现在我们来写一份求租信</span><span class="pen"></span></h1>
+<body>
+<div class="wrap-no wanted">
+  <div id="pleaseFill" class="test">
+    <div class="mask"></div>
+    <ul>
+      <li>请填写完整的信息</li>
+      <li id="sure"></li>
+    </ul>
+  </div>
 
-					</li>
-					<li class="wanted-item">
-						<div>
-							<div class="icon carIcon"></div>你好，我要求租一个房子,对房子所在的地点和交通，我希望是这样的：</div>
-						<textarea name="wantedSite" class="wantedSite" placeholder="请点击输入" oninput="vefity(this,50,300)"></textarea>
-						<p class="p1">多写一点，被看到的可能性越大</p>
-						<p class="p2">最多300字哦</p>
-						<p class="p3">为避免刷屏与马甲，地点信息点击OK后，只可修改3次</p>
-					</li>
-					<li class="wanted-item">
-						<div>
-							<div class="icon priceIcon"></div>我的预算情况是这样的（1K=1000）</div>
+  <!-- 页面自定义样式放在公共样式后面 -->
+  <div class="main wanted-main">
+    <ul>
 
-						<textarea name="wantedPrice" class="wantedPrice" placeholder="请点击输入" oninput="vefity(this,5,300)"></textarea>
-						<p class="p1">多写一点，被看到的可能性越大</p>
-						<p class="p2">最多1000字哦</p>
-					</li>
-					<li class="wanted-item">
-						<div>
-							<div class="icon personIcon"></div>我对于房间和室友的期待，是这样的</div>
+      <!-- 标题-结构改变 -->
+      <li class="wanted-title">
+        <span class="pen">现在我们来写一份求租信</span>
+        <img src="img/xiexin@2x.png" alt="">
+      </li>
 
-						<textarea name="wantedHome" class="wantedHome" placeholder="请点击输入" oninput="vefity(this,100,1000)"></textarea>
-						<p class="p1">多写一点，被看到的可能性越大</p>
-						<p class="p2">最多1000字哦</p>
-					</li>
-					<li class="wanted-item">
-						<div>
-							<div class="icon "></div>未来要住你的房子，在这里简单介绍下我的情况，请多指教</div>
+      <!-- 选择地铁 -->
+      <li class="subway">
+        <p>你好，我要求租一个房子</p>
+        <span>我希望求租的房子交通地点，是这样的</span>
+        <span class="add"></span>
+        <!-- 选项 -->
+        <ul id="subway-list">
+          <li>
+            <label>
+              <select name="">
+                <option value="">西二旗</option>
+              </select>
+            </label>
+            <label class="middle">
+              <select name="">
+                <option value="">13号线</option>
+              </select>
+            </label>
+            <label>
+              <select name="">
+                <option value="">海淀区</option>
+              </select>
+            </label>
+          </li>
+        </ul>
+      </li>
 
-						<textarea name="wantedMe" class="wantedMe" placeholder="请点击输入" oninput="vefity(this,50,100)"></textarea>
-						<p class="p1">多写一点，被看到的可能性越大</p>
-						<p class="p2">最多100字哦</p>
-					</li>
-					<li class="wanted-item">
-						<div>
-							<div class="icon contactIcon"></div>请你记一下我的联系微信号/常用邮箱（请不要留电话号码）</div>
-						<textarea name="wantedContact" class="wantedContact" placeholder="请点击输入" oninput="vefity(this,10,300)"></textarea>
-						<p class="p1">多写一点，被看到的可能性越大</p>
-						<p class="p2">最多300字哦</p>
-					</li>
-				</ul>
-				<div class="wanted-btn">
-					<div class="okBtn"></div>
-				</div>
-			</div>
+      <!-- 重构 -->
+      <li class="global-input location">
+        <p class="title">对于求租地点，我还要补充一下要求</p>
+        <textarea class="detail" placeholder="请点击输入" words="10-300" oninput="checkout(this)"></textarea>
+      </li>
 
-		</div>
+      <li class="global-input cost">
+        <p class="title">我的预算情况是这样的（1K=1000）</p>
+        <textarea class="detail" placeholder="请点击输入" words="10-300" oninput="checkout(this)"></textarea>
+      </li>
 
-	</body>
-	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/labelMach.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		$(function() {
-			$(".wanted-btn>div").on('touchend', function() {
-					//				$.ajax({
-					//					type: "POST",
-					//					url: "test.php",
-					//					contentType: "application/json; charset=utf-8",
-					//					dataType: "json",
-					//					data: {
-					//						wantedSite: $(".wantedSite").val(),
-					//						wantedPrice: $(".wantedPrice").val(),
-					//						wantedHome: $(".wantedHome").val(),
-					//						wantedMe: $(".wantedMe").val(),
-					//						wantedContact: $(".wantedContact").val()
-					//					},
-					//					success: function(data) {
-					//						alert(data.d);
-					//					},
-					//					error: function(err) {
-					//						alert(err);
-					//					}
-					//				})
-				var isTrue = (($(".wantedSite").attr("data") === "success") && ($(".wantedPrice").attr("data") === "success") && ($(".wantedHome").attr("data") === "success") && ($(".wantedMe").attr("data") === "success") && ($(".wantedContact").attr("data") === "success") && ($(".wantedContact").attr("data") === "success"));
-				console.log(isTrue);
-				if(isTrue) {
-					window.location.href = "wantedLabel.html";
-				} else {
-					$(".pleaseFill").show();
-				}
-			})
-		})
-	</script>
+      <li class="global-input people">
+        <p class="title">我对于房间和室友的期待，是这样的</p>
+        <textarea class="detail" placeholder="请点击输入" words="10-300" oninput="checkout(this)"></textarea>
+      </li>
+
+      <li class="global-input you">
+        <p class="title">未来要住你的房子，在这里简单介绍下，请多指教</p>
+        <textarea class="detail" placeholder="请点击输入" words="10-300" oninput="checkout(this)"></textarea>
+      </li>
+
+      <li class="global-input connect">
+        <p class="title">请你记一下我的联系微信号/常用邮箱</p>
+        <textarea class="detail" placeholder="请点击输入" words="10-300" oninput="checkout(this)"></textarea>
+      </li>
+
+      <li class="global-input delay">
+        <p class="title">我的求租信有效期到这一天，过了这天我就删除了</p>
+        <div class="detail">
+          <span id="date">请选择日期</span>
+          <span id="picker"></span>
+        </div>
+      </li>
+
+      <li class="global-input phone">
+        <p class="title">我的备用联系电话号在这里</p>
+        <textarea class="detail" placeholder="请点击输入" words="5-10" oninput="checkout(this)"></textarea>
+      </li>
+    </ul>
+
+    <!-- 确定按钮 -->
+    <div id="enter">
+      <button id="enter-button"></button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+<script src="js/jQuery-1.12.4min.js"></script>
+<script src="js/match.js"></script>
+<script src="js/labelMach.js"></script>
+<script src="js/picker.min.js"></script>
+<script>
+  $(document).ready(function () {
+
+    $(function () {
+      $(".wanted-btn>div").on('touchend', function () {
+        //				$.ajax({
+        //					type: "POST",
+        //					url: "test.php",
+        //					contentType: "application/json; charset=utf-8",
+        //					dataType: "json",
+        //					data: {
+        //						wantedSite: $(".wantedSite").val(),
+        //						wantedPrice: $(".wantedPrice").val(),
+        //						wantedHome: $(".wantedHome").val(),
+        //						wantedMe: $(".wantedMe").val(),
+        //						wantedContact: $(".wantedContact").val()
+        //					},
+        //					success: function(data) {
+        //						alert(data.d);
+        //					},
+        //					error: function(err) {
+        //						alert(err);
+        //					}
+        //				})
+      })
+    })
+
+    // 点击添加地铁选项
+    $('.add').on('click', function () {
+      $('#subway-list > li').first().clone().appendTo($('#subway-list'))
+    })
+
+    // 表单验证 + 上传
+    $("#enter-button").on('click', function () {
+      submit(function () {
+        window.location.href = "wantedLabel.html";
+      })
+    })
+  })
+</script>
 
 </html>

@@ -18,12 +18,14 @@
 			</ul>
 		</div>
 		<div class="thankView test">
+			<div class="mask"></div>
 			<ul>
 				<li>谢谢访问，目前不对你开放，送客</li>
 				<li class="sure"></li>
 			</ul>
 		</div>
 		<div class="thankAgree test" >
+			<div class="mask"></div>
 			<ul>
 				<li>请先同意用户协议</li>
 				<li class="sure"></li>
@@ -43,7 +45,7 @@
 					<div class="leftbtn"></div>
 				</div>
 				<div class="right">
-					<a class="rightbtn" href="search.html"></a>
+					<a class="rightbtn"></a>
 					<div class="rightimg">
 
 					</div>
@@ -66,13 +68,26 @@
 	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/preload.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-	$(".rightbtn").on('touchstart',function(){
+	$(".rightbtn").on('click',function(){
 		if($("input")[0].checked==false){
 			$(".thankAgree").show();
+
+            $(".thankAgree .sure").on("click",function () {
+                $(".thankAgree").hide();
+            })
+			$(".thankAgree .mask").on("click",function () {
+                $(".thankAgree").hide();
+            })
 		}
 	})
-	$(".leftbtn").on('touchstart',function(){
-			$(".thankView").show();	
+	$(".leftbtn").on('click',function(){
+			$(".thankView").show();
+        $(".thankView .sure").on("click",function () {
+            $(".thankView").hide();
+        })
+        $(".thankView .mask").on("click",function () {
+            $(".thankView").hide();
+        })
 	
 	})
 

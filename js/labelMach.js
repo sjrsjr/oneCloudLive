@@ -45,36 +45,3 @@ for(var i = 0; i < labels.length; i++) {
 	})
 
 }
-
-//求租小图标
-var arrWantedIcon = ['qz_iconche@2x.png', 'qz_iconqian@2x.png', 'qz_iconren@2x.png', 'qz_iconjia@2x.png', 'qz_btnphone@2x.png'];
-var wantedIcons = $(".wanted-item>div>.icon");
-for(var i = 0; i < wantedIcons.length; i++) {
-	wantedIcons[i].style.backgroundImage = "url(img/" + arrWantedIcon[i] + ")";
-	wantedIcons[i].style.backgroundSize = "contain";
-	wantedIcons[i].style.backgroundRepeat = "no-repeat";
-}
-
-//字数验证提示
-function vefity(obj, min, max) {
-	var len = obj.value.length;
-
-	console.log(len);
-	if(len < min) {
-//		$(obj).parent().find(".p1").show();
-		$(obj).siblings(".p1").show();
-//		
-	} else if(len >= min) {
-		$(obj).siblings(".p1").hide();
-		
-		if(len >= max) {
-			obj.value.substr(0, max);
-			$(obj).siblings(".p2").show();
-		} else {
-			$(obj).siblings(".p2").hide();
-			obj.setAttribute("data", 'success');
-			console.log(obj.getAttribute("data"))
-		}
-	}
-
-}

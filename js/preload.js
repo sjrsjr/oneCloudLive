@@ -12,5 +12,4 @@ for (var i = 0; i < imgSrc.length; i++) {
       $(".home").show();
     }
   }
-
 }

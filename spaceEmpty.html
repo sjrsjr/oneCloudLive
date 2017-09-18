@@ -12,14 +12,32 @@
 
 	<body>
 		<div class="wrap space-empty">
+			<!--关注弹框-->
+			<div class="test testAttention">
+				<div class="mask"></div>  <!--遮罩-->
+				<div class="attention-box">
+					<div class="atten-mess">
+						<h3 class="excuse">打扰了</h3>
+						<p>请确保已关注<span>一朵云上住</span></p>
+						<p>获得你的租房实时消息</p>
+					</div>
+					<div class="clearfix atten-btn">
+						<span class="no iblock"></span>  <!--未关注-->
+						<a class="on iblock" href="create.html"></a>  <!--已关注,跳转-->
+					</div>
+				</div>
+			</div>
+
 			<div class="space-empty-main">
 				<ul class="user_info">
-					<li class="head_img"></li>
+					<li class="head_img">
+						<img src="img/headimg.jpg" alt="">
+					</li>
 					<li class="nackname">Angelina <span class="sign">女神</span></li>
 					<li>我的小房本</li>
 				</ul>
 				<ul class="rent">
-					<li><a href="rent.html"></a></li>
+					<li><a href="#" class="rentbtn"></a></li>
 					<li></li>
 				</ul>
 				<img src="img/follow@2x.png" alt="" class="follow">
@@ -31,4 +49,23 @@
 	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
 
+<script>
+    $(document).ready(function () {
+
+
+	/*关注弹框*/
+    $(".rentbtn").on('click', function () {
+        $(".testAttention").show();
+        $(".testAttention .no").on('click',function () {
+            $(".testAttention").hide();
+        })
+        $(".testAttention .mask").on('click',function () {
+            $(".testAttention").hide();
+        })
+
+    })
+
+
+    })
+</script>
 </html>

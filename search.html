@@ -2,199 +2,332 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>一朵云上住</title>
-		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>一朵云上住</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dropload.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
 
-	<body>
-		<div class="search wrap">
-			<div class="main search-main">
+<body>
+<div class="search wrap">
+    <div class="main search-main">
 
-				<ul class="head">
-					<li class="inp">
-						<span></span><input type="text" name="subway" id="subway" value="" placeholder="输入地铁站" maxlength="20" /> 
-					</li>
-					<li class="search_choose">
-						<select name="lookFor">
-							<option value="找房子">找房子</option>
-							<option value="找人">找人</option>
-						</select>
-					</li>
-					<li class="searchBtn"></li>
-				</ul>
-				<!--没有搜索到信息-->
-				<div class="search-no main" style="background-color: #fff; display: none;">
-					<ul>
-						<li> hello,你来早了</li>
-						<li>还没有人发你要找的信息</li>
-						<li>如果你着急</li>
-					</ul>
-					<div>
-						<a href="">A：发微博艾特 &nbsp; @看房狗看房狗  &nbsp;帮你转发</a>
-						<a href="">B：点击【我的】，发布租房信息</a>
-					</div>
-				</div>
-				<ul class="drapList" style="display: none;">
-					<li><span class="station">朝阳门</span><span class="drop_right"></span></li>
-					<li><span class="station">北土城</span><span class="drop_right"></span></li>
-					<li><span class="station">西单</span><span class="drop_right"></span></li>
-				</ul>
-				<!--搜索到信息-->
-				<div class="main_text">
-					<a href="otherSpace.html" class="messages">
-						<ul class="user">
-							<li class="user_info">
-								<div class="head_img">
-								</div>
-								<span class="nackname">Angelina</span>
-								<span class="release_time">2016年11月6日</span>
-							</li>
-							<li class="user_title">11月28日合租及求租及其他</li>
-							<li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
-							<li class="rightArrow"></li>
-							<li class="line"><img src="img/ss_line@2x.png" /></li>
-						</ul>
-					</a>
-					<a href="otherSpace.html" class="messages">
-						<ul class="user">
-							<li class="user_info">
-								<div class="head_img">
-								</div>
-								<span class="nackname">Angelina</span>
-								<span class="release_time">2016年11月6日</span>
-							</li>
-							<li class="user_title">11月28日合租及求租及其他</li>
-							<li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
-							<li class="rightArrow"></li>
-							<li class="line"><img src="img/ss_line@2x.png" /></li>
-						</ul>
-					</a>
-					<a href="" class="messages">
-						<ul class="user">
-							<li class="user_info">
-								<div class="head_img"></div><span class="nackname">Angelina</span><span class="release_time">2016年11月6日</span></li>
-							<li class="user_title">11月28日合租及求租及其他</li>
-							<li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
-							<li class="rightArrow"></li>
-							<li class="line"><img src="img/ss_line@2x.png" /></li>
-						</ul>
-					</a>
-					
-					
-				</div>
+        <ul class="head">
+            <li class="inp">
+                <span></span><input type="text" name="subway" id="subway" value="" placeholder="输入地铁站" maxlength="20"/>
+            </li>
+            <li class="search_choose">
+                <select name="lookFor">
+                    <option value="找房子">找房子</option>
+                    <option value="找人">找人</option>
+                </select>
+            </li>
+            <li class="searchBtn"></li>
+        </ul>
+        <!--没有搜索到信息-->
+        <div class="search-no main" style="background-color: #fff; display: none;">
+            <ul>
+                <li> hello,你来早了</li>
+                <li>还没有人发你要找的信息</li>
+                <li>如果你着急</li>
+            </ul>
+            <div>
+                <a href="">A：发微博艾特 &nbsp; @看房狗看房狗 &nbsp;帮你转发</a>
+                <a href="">B：点击【我的】，发布租房信息</a>
+            </div>
+        </div>
+        <ul class="drapList" style="display: none;">
+            <li><span class="station">朝阳门</span><span class="drop_right"></span></li>
+            <li><span class="station">北土城</span><span class="drop_right"></span></li>
+            <li><span class="station">西单</span><span class="drop_right"></span></li>
+        </ul>
+        <!--搜索到信息-->
 
-			</div>
-			<div class="search_bottom">
-				<ul>
-					<li>
-						<a href="search.html"></a>
-					</li>
-					<li>
-						<a href="space.html"></a>
-					</li>
-				</ul>
-			</div>
-		</div>
+        <!--数据列表主体-->
+        <div class="main_text">
+            <div class="lists">
+                <a href="#" class="messages">
+                    <ul class="user">
+                        <li class="user_info">
+                            <div class="head_img">
+                                <img src="img/headimg.jpg" alt="">
+                            </div>
+                            <span class="nackname">Angelina</span>
+                            <span class="release_time">2016年11月6日</span>
+                        </li>
+                        <li class="user_title">11月28日合租及求租及其他</li>
+                        <li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
+                        <li class="rightArrow"></li>
+                        <li class="line"><img src="img/ss_line@2x.png"/></li>
+                    </ul>
+                </a>
+                <a href="#" class="messages">
+                    <ul class="user">
+                        <li class="user_info">
+                            <div class="head_img">
+                                <img src="img/headimg.jpg" alt="">
+                            </div>
+                            <span class="nackname">Angelina</span>
+                            <span class="release_time">2016年11月6日</span>
+                        </li>
+                        <li class="user_title">11月28日合租及求租及其他</li>
+                        <li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
+                        <li class="rightArrow"></li>
+                        <li class="line"><img src="img/ss_line@2x.png"/></li>
+                    </ul>
+                </a>
+                <a href="#" class="messages">
+                    <ul class="user">
+                        <li class="user_info">
+                            <div class="head_img"><img src="img/headimg.jpg" alt=""></div>
+                            <span class="nackname">Angelina</span><span class="release_time">2016年11月6日</span></li>
+                        <li class="user_title">11月28日合租及求租及其他</li>
+                        <li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li>
+                        <li class="rightArrow"></li>
+                        <li class="line"><img src="img/ss_line@2x.png"/></li>
+                    </ul>
+                </a>
 
-	</body>
-	<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/touchjs.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		//提交数据
-		//		$(function() {
-		//				$(".searchBtn").on('touchend', function() {
-		//					console.log($("#subway").val());
-		//					console.log($("select").val())
-		//					$.ajax({
-		//						type: "POST",
-		//						url: "test.php",
-		//						contentType: "application/json; charset=utf-8",
-		//						dataType: "json",
-		//						data: {
-		//							subway: $(".subway").val(),
-		//							lookFor: $("select").val()
-		//						},
-		//						success: function(data) {
-		//							alert(data.d);
-		//						},
-		//						error: function(err) {
-		//							alert(err);
-		//						}
-		//					})
-		//				})
-		//			})
-		
-//
-//		var disX = 0;
-//		var disY = 0;
-//		var x = 0;
-//		var y = 0;
-//		var d = $(".search-main")[0];
-//		//阻止默认
-//		//		touch.on(d, "touchstart touchmove", function(e) {
-//		//			e.preventDefault();
-//		//		})
-//
-//		//三个参数 对象  方式 回调
-//		touch.on(d, "drag", function(e) {
-//			//			//获取偏移位置
-//			//			x = disX + e.x;
-//			//			y = disY + e.y;
-//			//			//修改DIV的位置
-//			//
-//			//			d.style.left=x+"px";
-//			//			d.style.top=y+"px";
-//			//			
-//			y = disY + e.y
-//			d.style.transform = "translateY(" + y + "px)";
-//
-//			// d.style.transition = "all 0s linear";
-//
-//		});
-//		touch.on(d, "dragend", function() {
-//			//修正d的初始状态
-//			//			disX = x;
-//			//			disY = y;
-//
-//			if(y > 0) {
-//				d.style.transform = "translateY(0px)";
-//				d.style.transition = "all 0.2s linear";
-//				y = 0;
-				var messages = $(".main_text")[0];
-				
-//				console.log(all.length);
-				for(var i = 0; i <5; i++) {
-					var mes = document.createElement('a');
-					mes.className = 'messages';
-					mes.innerHTML = '<ul class="user"><li class="user_info"><div class="head_img"></div><span class="nackname">Angelina</span><span class="release_time">2016年11月6日</span></li><li class="user_title">11月28日合租及求租及其他</li><li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li><li class="rightArrow"></li><li class="line"><img src="img/ss_line@2x.png"/></li></ul>';
-					//下拉刷新，新纪录插到最前面；
-					messages.insertBefore(mes, messages.firstChild);
 
-				}
-//			}
-//			disY = y;
-//		});
-		$("#subway").focus(function(){
-			$(".drapList").show();
-			
-		})
-		$("#subway").blur(function(){
-			$(".drapList").hide();
-			
-		})
-		$(".drapList>li").on('touchstart',function(){
-			console.log("option");
-			$("#subway").val($(this).find(".station").text());
-			setTimeout(function(){
-				$(".drapList").hide();
-			},1000)
-		});
-		
-	</script>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <a class="home" href="search.html"></a>
+        <a class="space" href="#"></a>
+    </div>
+
+</div>
+
+</body>
+<script src="js/jQuery-1.12.4min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/match.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/touchjs.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/dropload.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script type="text/javascript">
+  //提交数据
+  //		$(function() {
+  //				$(".searchBtn").on('touchend', function() {
+  //					console.log($("#subway").val());
+  //					console.log($("select").val())
+  //					$.ajax({
+  //						type: "POST",
+  //						url: "test.php",
+  //						contentType: "application/json; charset=utf-8",
+  //						dataType: "json",
+  //						data: {
+  //							subway: $(".subway").val(),
+  //							lookFor: $("select").val()
+  //						},
+  //						success: function(data) {
+  //							alert(data.d);
+  //						},
+  //						error: function(err) {
+  //							alert(err);
+  //						}
+  //					})
+  //				})
+  //			})
+
+  //
+  //		var disX = 0;
+  //		var disY = 0;
+  //		var x = 0;
+  //		var y = 0;
+  //		var d = $(".search-main")[0];
+  //		//阻止默认
+  //		//		touch.on(d, "touchstart touchmove", function(e) {
+  //		//			e.preventDefault();
+  //		//		})
+  //
+  //		//三个参数 对象  方式 回调
+  //		touch.on(d, "drag", function(e) {
+  //			//			//获取偏移位置
+  //			//			x = disX + e.x;
+  //			//			y = disY + e.y;
+  //			//			//修改DIV的位置
+  //			//
+  //			//			d.style.left=x+"px";
+  //			//			d.style.top=y+"px";
+  //			//
+  //			y = disY + e.y
+  //			d.style.transform = "translateY(" + y + "px)";
+  //
+  //			// d.style.transition = "all 0s linear";
+  //
+  //		});
+  //		touch.on(d, "dragend", function() {
+  //			//修正d的初始状态
+  //			//			disX = x;
+  //			//			disY = y;
+  //
+  //			if(y > 0) {
+  //				d.style.transform = "translateY(0px)";
+  //				d.style.transition = "all 0.2s linear";
+  //				y = 0;
+  var messages = $(".main_text")[0];
+
+  //				console.log(all.length);
+  for (var i = 0; i < 5; i++) {
+    var mes = document.createElement('a');
+    mes.className = 'messages';
+    mes.innerHTML = '<ul class="user"><li class="user_info"><div class="head_img"></div><span class="nackname">Angelina</span><span class="release_time">2016年11月6日</span></li><li class="user_title">11月29日合租及求租及其他</li><li class="user_mes">车程半小时以内，租金1500上下，求联系车程半小时以内，租金1500上下，求联系</li><li class="rightArrow"></li><li class="line"><img src="img/ss_line@2x.png"/></li></ul>';
+    //下拉刷新，新纪录插到最前面；
+    messages.insertBefore(mes, messages.firstChild);
+
+  }
+  //			}
+  //			disY = y;
+  //		});
+  $("#subway").focus(function () {
+    $(".drapList").show();
+
+  })
+  $("#subway").blur(function () {
+    $(".drapList").hide();
+
+  })
+  $(".drapList>li").on('touchstart', function () {
+    console.log("option");
+    $("#subway").val($(this).find(".station").text());
+    setTimeout(function () {
+      $(".drapList").hide();
+    }, 1000)
+  });
+
+</script>-->
+
+<script>
+    $(function () {
+        // 页数
+        var page = 0;
+        // 每页展示10个
+//        var size = 10;
+        // dropload
+        $('.main_text').dropload({
+            scrollArea: window,
+            domUp: {
+                domClass: 'dropload-up',
+                domRefresh: '<div class="dropload-refresh">↓下拉刷新-自定义内容</div>',
+                domUpdate: '<div class="dropload-update">↑释放更新-自定义内容</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>加载中-自定义内容...</div>'
+            },
+            domDown: {
+                domClass: 'dropload-down',
+                domRefresh: '<div class="dropload-refresh">↑上拉加载更多-自定义内容</div>',
+                domLoad: '<div class="dropload-load"><span class="loading"></span>加载中-自定义内容...</div>',
+                domNoData: '<div class="dropload-noData">暂无数据-自定义内容</div>'
+            },
+            loadUpFn: function (me) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'json/update.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        var result = '';
+                        for (var i = 0; i < data.lists.length; i++) {
+                            result += '<a href="' + data.lists[i].link + '" class="messages">' +
+                                '<ul class="user">' +
+                                '<li class="user_info">' +
+                                '<div class="head_img">' +
+                                '<img src="' + data.lists[i].imgurl + '" alt="">' +
+                                '</div>' +
+                                '<span class="nackname">' + data.lists[i].username + '</span>' +
+                                '<span class="release_time">' + data.lists[i].date + '</span>' +
+                                '</li>' +
+                                '<li class="user_title">' + data.lists[i].title + '</li>' +
+                                '<li class="user_mes">' + data.lists[i].mess + '</li>' +
+                                '<li class="rightArrow"></li>' +
+                                '<li class="line"><img src="img/ss_line@2x.png"/></li>' +
+                                '</ul>' +
+                                '</a>';
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function () {
+                            $('.lists').html(result);
+                            // 每次数据加载完，必须重置
+                            me.resetload();
+                            // 重置页数，重新获取loadDownFn的数据
+                            page = 0;
+                            // 解锁loadDownFn里锁定的情况
+                            me.unlock();
+                            me.noData(false);
+                        }, 1000);
+                    },
+                    error: function (xhr, type) {
+                        // alert('Ajax error!+');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            },
+            loadDownFn: function (me) {
+                page++;
+                // 拼接HTML
+                var result = '';
+                $.ajax({
+                    type: 'GET',
+//                    url: 'http://ons.me/tools/dropload/json.php?page='+page+'&size='+size,
+                    url: 'json/more.json',
+                    dataType: 'json',
+                    success: function (data) {
+                        var arrLen = data.lists.length;
+                        if (arrLen > 0) {
+                            for (var i = 0; i < arrLen; i++) {
+                                result += '<a href="' + data.lists[i].link + '" class="messages">' +
+                                    '<ul class="user">' +
+                                    '<li class="user_info">' +
+                                    '<div class="head_img">' +
+                                    '<img src="' + data.lists[i].imgurl + '" alt="">' +
+                                    '</div>' +
+                                    '<span class="nackname">' + data.lists[i].username + '</span>' +
+                                    '<span class="release_time">' + data.lists[i].date + '</span>' +
+                                    '</li>' +
+                                    '<li class="user_title">' + data.lists[i].title + '</li>' +
+                                    '<li class="user_mes">' + data.lists[i].mess + '</li>' +
+                                    '<li class="rightArrow"></li>' +
+                                    '<li class="line"><img src="img/ss_line@2x.png"/></li>' +
+                                    '</ul>' +
+                                    '</a>';
+                            }
+                            // 如果没有数据
+                        } else {
+                            // 锁定
+                            me.lock();
+                            // 无数据
+                            me.noData();
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function () {
+                            // 插入数据到页面，放到最后面
+
+                            $(".messages").eq($(".messages").length-1).find(".line").hide();
+                            $(".cut-line").hide();
+                            $('.lists').append("<div class='cut-line'><span>汪汪，下面是最新的内容</span></div>");
+                            $('.lists').append(result);
+                            // 每次数据插入，必须重置
+                            me.resetload();
+                        }, 1000);
+                    },
+                    error: function (xhr, type) {
+                        // alert('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            },
+            threshold: 50
+        });
+
+
+    });
+</script>
 
 </html>
