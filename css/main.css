@@ -220,7 +220,6 @@ body {
   display: none;
   position: fixed;
   top: 0;
-  left:0;
   z-index: 20;
   overflow-y: hidden;
   /*关注弹框*/
@@ -1240,6 +1239,11 @@ body {
   margin-bottom: 0.55rem;
   background: #cce0e1 url("../img/show-pic-bg.png") center no-repeat;
   background-size: contain;
+  overflow: hidden;
+}
+.space .space-main .project .project-img img {
+  width: 100%;
+  min-height: 1.4rem;
 }
 .space .space-main .project .project-img .count-photo {
   width: 0.5rem;
@@ -1328,7 +1332,7 @@ body {
   background: url("../img/edit@2x.png") no-repeat;
   background-size: contain;
 }
-.space .space-main .project .control li .sharebtn {
+.space .space-main .project .control li.sharebtn a {
   background: url("../img/share@2x.png") no-repeat;
   background-size: contain;
 }
@@ -1381,7 +1385,7 @@ body {
 .space .space-main .vip-member {
   margin-bottom: 0.9rem;
   width: 100%;
-  height: 6rem;
+  height: 3.56rem;
   background-color: #fff;
   overflow: hidden;
 }
@@ -1409,14 +1413,6 @@ body {
 }
 .space .space-main .vip-member ul li a.threeCloud {
   background: url("../img/zy_san@2x.png") no-repeat;
-  background-size: contain;
-}
-.space .space-main .vip-member ul li a.fourCloud {
-  background: url("../img/zy_si@2x.png") no-repeat;
-  background-size: contain;
-}
-.space .space-main .vip-member ul li a.fiveCloud {
-  background: url("../img/zy_wu@2x.png") no-repeat;
   background-size: contain;
 }
 .space .space-main .vip-member ul li .right {
@@ -1573,7 +1569,7 @@ body {
   font-size: 0.28rem;
   height: 1.21rem;
   width: 1.2rem;
-  background: url("../img/fix-white@3x.png") no-repeat;
+  background: url("../img/fix-black@2x.png") no-repeat;
   background-size: contain !important;
   color: #fff;
 }

@@ -1413,6 +1413,12 @@ body {
         .px2rem(margin-bottom, 55);
         background: #cce0e1 url("../img/show-pic-bg.png") center no-repeat;
         background-size: contain;
+        overflow: hidden;
+        img{
+          width:100%;
+          .px2rem(min-height, 140);
+
+        }
         .count-photo {
           .px2rem(width, 50);
           .px2rem(height, 32);
@@ -1489,7 +1495,7 @@ body {
             background-size: contain;
 
           }
-          .sharebtn {
+          &.sharebtn a{
             background: url("../img/share@2x.png") no-repeat;
             background-size: contain;
 
